@@ -1,0 +1,99 @@
+ /* Base styles */
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Calculator styles */
+  .calculator {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Display styles */
+  .display {
+    color: #333;
+    background-color: #9BD5C0;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #display {
+    border: none;
+    background-color: transparent;
+    font-size: 2em;
+    width: 100%;
+    text-align: right;
+  }
+  
+  /* Button grid */
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* Button styles */
+  .button {
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 15px 0;
+    flex-basis: calc(25% - 10px);
+    font-size: 1.5em;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .button:active {
+    background-color: #555;
+  }
+  
+  /* Modifier buttons */
+  #clear-display {
+    background-color: #ff6666; /* Red color for clear button */
+  }
+  
+  #add, #subtract, #multiply, #divide, #equals {
+    background-color: #4d4d4d; /* Darker color for operation buttons */
+  }
+  
+  /* Handling the equals button separately if needed */
+  #equals {
+    background-color: #337ab7; /* Different color for the equals button */
+  }
+  
+  /* Adjust the width of the zero button to be double */
+  .button[id="0"] {
+    flex-basis: calc(50% - 10px);
+  }
+  
+  /* Adjust the width of the operator buttons to be full */
+  .button[id="divide"] {
+    flex-basis: 100%;
+  }
+  
+  /* Hover effect */
+  .button:hover {
+    background-color: #7e7e7e;
+  }
+  
+  
